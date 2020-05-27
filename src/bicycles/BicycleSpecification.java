@@ -1,20 +1,19 @@
 package bicycles;
-enum BicycleType {
-    ROADBIKE,
-    MOUNTAINBIKE,
-    TANDEM
-}
-public class BicycleSpecification extends BicycleBase{
+
+public class BicycleSpecification {
 
    // class BicycleSpecification {
         private int accelerationSpeed;
         // add a variable for brakeSpeed
         private int brakeSpeed;
-
+        BicycleType bicycleType;
+        private int getAccelerationSpeed;
 
         public BicycleSpecification(int accelerationSpeed, int brakeSpeed, BicycleType bicycleType) {
             // existing code above this
             this.bicycleType = bicycleType;
+            this.accelerationSpeed=accelerationSpeed;
+            this.brakeSpeed=brakeSpeed;
         }
         public BicycleType getBicycleType(){
             return bicycleType;
@@ -23,11 +22,7 @@ public class BicycleSpecification extends BicycleBase{
         public int getBrakeSpeed(){
             return brakeSpeed;
         }
-        public BicycleType getBicycleType(){
-            return BicycleType;
-        }
     }
-
 
     /*private int accelerationSpeed;
     // add a variable for brakeSpeed

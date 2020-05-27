@@ -1,19 +1,13 @@
 package bicycles;
+public class RideOne implements BikeRide {
+    public void ride(Bicycle bicycle){
 
-public class RideOne implements Bicycle {
+        //Taking MountainBike for a rides
 
-    int speed=0;
-    public void brake(){
-        speed=-3;
-    }
-    public int currentSpeed(){
-        return speed;
-    }
-    public void stop(){
-        speed=0;
-    }
-    public void accelerate(){
-        speed=+9;
+        bicycle.accelerate();
+        bicycle.accelerate();
+        bicycle.brake();
+       // bicycle.stop();
     }
 }
 
