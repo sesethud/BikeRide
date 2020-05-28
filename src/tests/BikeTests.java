@@ -2,6 +2,8 @@ package tests;
 
 
 import bicycles.Bicycle;
+import bicycles.BicycleType;
+import bicycles.FunRide;
 import models.MountainBike;
 import models.RoadBike;
 import org.junit.jupiter.api.Test;
@@ -31,5 +33,16 @@ public class BikeTests {
         assertEquals(7,bicycle.currentSpeed(),"RoadBike Test-");
     }
 
+
+    @Test
+    public void testFunRide(){
+        FunRide funride=new FunRide(6);
+        funride.accept(BicycleType.MOUNTAINBIKE);
+        funride.accept(BicycleType.MOUNTAINBIKE);
+        funride.accept(BicycleType.TANDEM);
+        funride.accept(BicycleType.TANDEM);
+        funride.accept(BicycleType.MOUNTAINBIKE);
+        assertEquals(1,funride.getCountForType(BicycleType.TANDEM),"Tandem");
+    }
 
 }

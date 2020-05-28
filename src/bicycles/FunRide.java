@@ -2,16 +2,16 @@ package bicycles;
 
 import java.util.ArrayList;
 
-class FunRide {
-    ArrayList<BicycleType> list=new ArrayList<BicycleType>();
+public class FunRide {
+    ArrayList<BicycleType> list=new ArrayList<>();
      private int maxBikes;
 
-     FunRide(int maxBikes){
+     public FunRide(int maxBikes){
          this.maxBikes=maxBikes;
      }
     public void accept( BicycleType bicycleType){
 
-      if(list.size()>maxBikes && !list.contains(bicycleType)){
+      if(list.size()<=maxBikes&& !list.contains(bicycleType)){
        list.add(bicycleType);
        System.out.println("accepted");
       }else{
@@ -23,8 +23,8 @@ class FunRide {
      for (int i = 0; i < list.size(); i++) {
       if (list.contains(bi)) {
        count = +1;
-      }
-     }
+      }}
+
      return count;
     }
 }
