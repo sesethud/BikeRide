@@ -11,7 +11,7 @@ public class FunRide {
      }
     public void accept( BicycleType bicycleType){
 
-      if(list.size()<=maxBikes&& !list.contains(bicycleType)){
+      if(list.size()<=maxBikes){
        list.add(bicycleType);
        System.out.println("accepted");
       }else{
@@ -21,8 +21,9 @@ public class FunRide {
     public int getCountForType(BicycleType bi) {
      int count = 0;
      for (int i = 0; i < list.size(); i++) {
-      if (list.contains(bi)) {
+      if (list.listIterator(i).equals(bi)) {
        count = +1;
+       System.out.print(count);
       }}
 
      return count;

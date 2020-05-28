@@ -2,6 +2,7 @@ package tests;
 
 
 import bicycles.Bicycle;
+import bicycles.BicycleSpecification;
 import bicycles.BicycleType;
 import bicycles.FunRide;
 import models.MountainBike;
@@ -14,7 +15,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class BikeTests {
 
     @Test
-
     public void shouldAccelerateBrakeMountainBike() {
         Bicycle bicycle = new MountainBike();
         bicycle.accelerate();
@@ -44,5 +44,4 @@ public class BikeTests {
         funride.accept(BicycleType.MOUNTAINBIKE);
         assertEquals(1,funride.getCountForType(BicycleType.TANDEM),"Tandem");
     }
-
 }
